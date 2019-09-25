@@ -132,7 +132,7 @@ class PrincipalsVocabulary(SimpleVocabulary):
             )
         principal = self._get_principal_from_source(value=value, token=token)
         if principal is None:
-            raise LookupError('Principal {} not found'.format(value or token))
+            raise LookupError(u'Principal {} not found'.format(value or token))
         if principal.isGroup():
             title = principal.getProperty('title', principal.getId())
             principal_type = 'group'
